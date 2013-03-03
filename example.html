@@ -1,0 +1,76 @@
+<html>
+<head>
+   <title>Hello, World! example for mxGraph</title>
+
+   <!-- Sets the basepath for the library if not in same directory -->
+   <script type="text/javascript">
+      mxBasePath = 'src';
+   </script>
+
+   <!-- Loads and initializes the library -->
+
+
+   <!-- Example code -->
+   
+</head>
+
+<!-- Page passes the container for the graph to the program -->
+<body>
+   <div style="position: absolute; overflow: hidden; padding: 2px; left: 0px; top: 26px; width: 24px; bottom: 0px;">
+      <img class="mxToolbarMode" src="editors/images/rectangle.gif">
+      <img class="mxToolbarMode" src="editors/images/rounded.gif">
+      <img class="mxToolbarMode" src="editors/images/ellipse.gif">
+      <img class="mxToolbarMode" src="editors/images/rhombus.gif">
+      <img class="mxToolbarMode" src="editors/images/triangle.gif">
+      <img class="mxToolbarMode" src="editors/images/cylinder.gif">
+      <img class="mxToolbarMode" src="editors/images/actor.gif">
+      <hr style="margin-right: 6px;" size="1">
+   </div>
+   <!-- Creates a container for the graph with a grid wallpaper -->
+   <div id="graphContainer"
+      style="background:url('src/images/grid.png')">
+   </div>
+</body>
+<script type="text/javascript" src="src/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="src/js/mxClient.min.js"></script>
+<script type="text/javascript">
+      $(function(){
+         // Program starts here. Creates a sample graph in the
+         // DOM node with the specified ID. This function is invoked
+         // from the onLoad event handler of the document (see below).
+         // Checks if the browser is supported
+         if (!mxClient.isBrowserSupported())
+         {
+            mxUtils.error('Browser is not supported!', 200, false);
+         }
+         else
+         {
+            // Creates the graph inside the given container
+            var graph = new mxGraph(document.getElementById('graphContainer'));
+
+            // Enables rubberband selection
+            new mxRubberband(graph);
+
+            // Gets the default parent for inserting new cells. This
+            // is normally the first child of the root (ie. layer 0).
+            var parent = graph.getDefaultParent();
+
+            // Adds cells to the model in a single step
+            graph.getModel().beginUpdate();
+            try
+            {
+               var v1 = graph.insertVertex(parent, null,
+                        'Hello,', 20, 20, 80, 30);
+               var v2 = graph.insertVertex(parent, null,
+                        'World!', 200, 150, 80, 30);
+               var e1 = graph.insertEdge(parent, null, '', v1, v2);
+            }
+            finally
+            {
+               // Updates the display
+               graph.getModel().endUpdate();
+            }
+         }
+      });
+   </script>
+</html>
