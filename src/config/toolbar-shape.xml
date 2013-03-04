@@ -1,0 +1,18 @@
+<mxEditor>
+	<mxDefaultToolbar as="toolbar">
+		<add as="Text" template="text" icon="src/images/text.gif"/>
+		<add as="Container" template="container" icon="src/images/swimlane.gif"/>
+		<add as="Rectangle" template="rectangle" icon="src/images/rectangle.gif"/>
+		<add as="Rounded" template="rounded" icon="src/images/rounded.gif"/>
+		<add as="Ellipse" template="shape" style="ellipse" icon="src/images/ellipse.gif"/>
+		<add as="Double Ellipse" template="shape" style="doubleEllipse" icon="src/images/doubleellipse.gif"/>
+		<add as="Rhombus" template="shape" style="rhombus" icon="src/images/rhombus.gif"/>
+		<add as="Triangle" template="actor" style="triangle" icon="src/images/triangle.gif"/>
+		<add as="Hexagon" template="cloud" style="hexagon" icon="src/images/hexagon.gif"/>
+		<add as="Actor" template="actor" style="actor" icon="src/images/actor.gif"/>
+		<add as="Cylinder" template="shape" style="cylinder" icon="src/images/cylinder.gif"/>
+		<add as="Cloud" template="cloud" style="cloud" icon="src/images/cloud.gif"/>
+		<add as="Line" template="hline" style="hline" icon="src/images/hline.gif"/>
+		<add as="Image" template="image" icon="src/images/image.gif"/>
+	</mxDefaultToolbar>
+</mxEditor>

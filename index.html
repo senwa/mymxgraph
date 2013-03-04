@@ -23,7 +23,7 @@
 <style type="text/css">
 	body { 
 		padding-top: 30px;
-		background-color: #fff;
+		background-color: #444;
 	}
 </style>
 <link href="src/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -68,6 +68,14 @@
 				<span class="label">3</span>
 			</a>
 			<ul id="toolbar-basic">
+			</ul>
+		</li>
+		<li class="submenu">
+			<a href="#"> <i class="icon icon-white icon-th-list"></i>
+				<span>图形</span>
+				<span class="label">3</span>
+			</a>
+			<ul id="toolbar-shpae">
 			</ul>
 		</li>
 	</ul>
@@ -312,24 +320,6 @@ function onInit(editor)
 		editor.addListener(mxEvent.ROOT, f);
 		f(editor);
 	}
-	
-    // Changes the zoom on mouseWheel events
-    mxEvent.addMouseWheelListener(function (evt, up)
-    {
-	    if (!mxEvent.isConsumed(evt))
-	    {
-	    	if (up)
-			{
-	    		editor.execute('zoomIn');
-			}
-			else
-			{
-				editor.execute('zoomOut');
-			}
-			
-			mxEvent.consume(evt);
-	    }
-    });
 }
 $(function(){
 	

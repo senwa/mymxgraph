@@ -1,0 +1,34 @@
+<mxEditor>
+	<ui>
+		<add as="toolbar" element="toolbar-basic"/>
+	</ui>
+	<mxDefaultToolbar as="toolbar">
+		<add as="connect" mode="connect" icon="src/images/connect.gif"><![CDATA[
+			function (editor)
+			{
+				if (editor.defaultEdge != null)
+				{
+					editor.defaultEdge.style = null;
+				}
+			}
+		]]></add>
+		<add as="connect" mode="connect" icon="src/images/straight.gif"><![CDATA[
+			function (editor)
+			{
+				if (editor.defaultEdge != null)
+				{
+					editor.defaultEdge.style = 'straightConnector';
+				}
+			}
+		]]></add>
+		<add as="connect" mode="connect" icon="src/images/arrow.gif"><![CDATA[
+			function (editor)
+			{
+				if (editor.defaultEdge != null)
+				{
+					editor.defaultEdge.style = 'arrowConnector';
+				}
+			}
+		]]></add>
+	</mxDefaultToolbar>
+</mxEditor>
