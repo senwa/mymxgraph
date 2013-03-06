@@ -94,6 +94,7 @@ img.mxToolbarModeSelected {
 	margin-bottom: 2px;
 	border-width: 2px;
 	border-style: inset;
+	border-color: #444;
 }
 div.mxTooltip {
 	-webkit-box-shadow: 3px 3px 12px #C0C0C0;
@@ -252,14 +253,14 @@ a:hover {
 #sidebar > ul > li > a > .label {
 	background-color: #333333;
 }
-#sidebar > ul > li > a:hover {
+#sidebar > ul > li > a:hover,#sidebar > ul .toolbar > a:hover {
 	background-color: #4A4A4A;
 }
-#sidebar > ul ul {
+#sidebar > ul ul,#sidebar > ul .toolbar {
 	border-top: 1px solid #4E4E4E;
 	background-color: #2A2A2A;
 }
-#sidebar > ul ul li a {
+#sidebar > ul ul li a{
 	border-top: 1px solid #333333;
 	border-bottom: 1px solid #202020;
 }
@@ -267,7 +268,19 @@ a:hover {
 	color: #CCCCCC;
 	background-color: #272727;
 }
-
+.toolbar {
+	float: left;
+	width: 100%;
+}
+.submenu {
+    clear: both;
+}
+.toolbar a {
+	padding: 5px 2px 5px 2px;
+	float: left;
+	width: 68px;
+	text-align: center;
+}
 /* Content */
 #content {
     background: none repeat scroll 0 0 #eeeeee;

@@ -9,7 +9,6 @@
 
 <!-- Le styles -->
 <link href="src/css/bootstrap.min.css" rel="stylesheet">
-<link href="src/css/common.css" rel="stylesheet">
 
 <link rel="stylesheet" href="src/css/jquery-ui-1.10.1.custom.css">
 <link rel="stylesheet" href="src/css/font-awesome.min.css">
@@ -67,16 +66,9 @@
 				<span>基本</span>
 				<span class="label">3</span>
 			</a>
-			<ul id="toolbar-basic">
-			</ul>
-		</li>
-		<li class="submenu">
-			<a href="#"> <i class="icon icon-white icon-th-list"></i>
-				<span>图形</span>
-				<span class="label">3</span>
-			</a>
-			<ul id="toolbar-shpae">
-			</ul>
+			<div class="toolbar" id="toolbar">
+				
+			</div>
 		</li>
 	</ul>
 </div>
@@ -112,222 +104,26 @@
 <script type="text/javascript" src="src/js/holder.js"></script>
 <script type="text/javascript" src="src/js/jquery-ui-1.10.1.custom.min.js"></script>
 <script type="text/javascript" src="src/js/prettify.js"></script>
-<script type="text/javascript" src="src/js/mxClient.min.js"></script>
-<script type="text/javascript" src="src/js/mxApplication.js"></script>
-<script type="text/javascript" src="src/js/common.js"></script>
-
 <!-- Sets the basepath for the library if not in same directory -->
 <script type="text/javascript">
 	mxBasePath = 'src';
 </script>
+<script type="text/javascript" src="src/js/mxClient.js"></script>
+<script type="text/javascript" src="src/js/mxApplication.js"></script>
+<script type="text/javascript" src="src/js/common.js"></script>
+
+<script type="text/javascript">
+	function onInit(editor) {
+
+	}
+</script>
 <script type="text/javascript">
 $(function (){
-	// // Defines an icon for creating new connections in the connection handler.
-	// // This will automatically disable the highlighting of the source vertex.
-	// mxConnectionHandler.prototype.connectImage = new mxImage('src/images/connector.png', 16, 16);
-	// // Checks if browser is supported
-	// if (!mxClient.isBrowserSupported())
-	// {
-	// 	// Displays an error message if the browser is
-	// 	// not supported.
-	// 	mxUtils.error('Browser is not supported!', 200, false);
-	// }
-	// else
-	// {
-	// 	// Creates the div for the toolbar
-	// 	var tbContainer = document.getElementById('sidebar');
-
-	// 	var toolbar = new mxToolbar(tbContainer);
-	// 	toolbar.enabled = false
-
-	// 	new mxDivResizer(tbContainer);
-
-	// 	// Creates the div for the graph
-	// 	var container = document.getElementById('container');
-
-	// 	// Creates the graph inside the given container
- //        var graph = new mxGraph(container);
-		
-	// 	// Enables rubberband selection
- //        new mxRubberband(graph);
-
- //        // Enables new connections in the graph
-
- //        var vertexStyle = graph.getStylesheet().getDefaultVertexStyle();
- //        vertexStyle.shape = "circle";
- //        vertexStyle.fontColor = "#FFFFFF";
- //        vertexStyle.strokeColor = "red";
- //        vertexStyle.strokeWidth = "5";
- //        graph.getStylesheet().putDefaultVertexStyle(vertexStyle);
- //        console.log(vertexStyle);
-
- //        var edgeStyle = graph.getStylesheet().getDefaultEdgeStyle();
- //        edgeStyle.strokeColor = "red";
- //        edgeStyle.strokeWidth = "5";
-
- //        graph.getStylesheet().putDefaultEdgeStyle(edgeStyle);
- //        console.log(edgeStyle);
-
-	// 	graph.setConnectable(true);
-	// 	graph.setMultigraph(false);
-
-	// 	new mxDivResizer(container);
-
-	// 	addVertex('editors/images/rectangle.gif', 100, 40, '');
-	// 	addVertex('editors/images/rounded.gif', 100, 40, 'shape=rounded');
-	// 	addVertex('editors/images/ellipse.gif', 40, 40, 'shape=ellipse');
-	// 	addVertex('editors/images/rhombus.gif', 40, 40, 'shape=rhombus');
-	// 	addVertex('editors/images/triangle.gif', 40, 40, 'shape=triangle');
-	// 	addVertex('editors/images/cylinder.gif', 40, 40, 'shape=cylinder');
-	// 	addVertex('editors/images/actor.gif', 30, 40, 'shape=actor');
-	// 	toolbar.addLine();
-
-	// 	$('[data-toggle="sidebar"]').each(function(){
-
-	// 		var style = $(this).data("style");
-
-	// 		var prototype = new mxCell(null, new mxGeometry(0, 0, 100, 40), style);
-	// 		prototype.setVertex(true);
-
-	// 		var funct = function(graph, evt, cell)
-	// 		{
-	// 			graph.stopEditing(false);
-
-	// 			var pt = graph.getPointForEvent(evt);
-	// 			var vertex = graph.getModel().cloneCell(prototype);
-	// 			vertex.geometry.x = pt.x;
-	// 			vertex.geometry.y = pt.y;
-					
-	// 			graph.addCell(vertex);
-	// 			graph.setSelectionCell(vertex);
-	// 		}
-
-	// 		// Creates the image which is used as the drag icon (preview)
-	// 		mxUtils.makeDraggable(this, graph, funct);
-	// 	});
-
- //        // Gets the default parent for inserting new cells. This
- //        // is normally the first child of the root (ie. layer 0).
- //        var parent = graph.getDefaultParent();
-
- //        // Adds cells to the model in a single step
- //        graph.getModel().beginUpdate();
- //        try
- //        {
- //           var v1 = graph.insertVertex(parent, null,
- //                    'Hello,', 20, 20, 80, 30);
- //           var v2 = graph.insertVertex(parent, null,
- //                    'World!', 200, 150, 80, 30);
- //           var e1 = graph.insertEdge(parent, null, '', v1, v2);
- //        }
- //        finally
- //        {
- //           // Updates the display
- //           graph.getModel().endUpdate();
- //        }
-	// }
-	// function addToolbarItem(graph, toolbar, prototype, image){
-	// 	// Function that is executed when the image is dropped on
-	// 	// the graph. The cell argument points to the cell under
-	// 	// the mousepointer if there is one.
-	// 	var funct = function(graph, evt, cell)
-	// 	{
-	// 		graph.stopEditing(false);
-
-	// 		var pt = graph.getPointForEvent(evt);
-	// 		var vertex = graph.getModel().cloneCell(prototype);
-	// 		vertex.geometry.x = pt.x;
-	// 		vertex.geometry.y = pt.y;
-				
-	// 		graph.addCell(vertex);
-	// 		graph.setSelectionCell(vertex);
-	// 	}
-
-	// 	// Creates the image which is used as the drag icon (preview)
-	// 	var img = toolbar.addMode(null, image, funct);
-	// 	mxUtils.makeDraggable(img, graph, funct);
-	// }
-	// function addVertex(icon, w, h, style){
-	// 	var vertex = new mxCell(null, new mxGeometry(0, 0, w, h), style);
-	// 	vertex.setVertex(true);
-
-	// 	addToolbarItem(graph, toolbar, vertex, icon);
-	// }
+	mxBasePath = 'src';
+	new mxApplication("src/config/diagrameditor.xml");
+	$(".mxToolbarModeSelected,.mxToolbarMode").wrap("<a href='#'></a>");
 });
-function onInit(editor)
-{
-	// Crisp rendering in SVG except for connectors, actors, cylinder, ellipses
-	mxShape.prototype.crisp = true;
-	mxActor.prototype.crisp = false;
-	mxCylinder.prototype.crisp = false;
-	mxEllipse.prototype.crisp = false;
-	mxDoubleEllipse.prototype.crisp = false;
-	mxConnector.prototype.crisp = false;
-	
-	// Enables guides
-	mxGraphHandler.prototype.guidesEnabled = true;
-	
-    // Alt disables guides
-    mxGuide.prototype.isEnabledForEvent = function(evt)
-    {
-    	return !mxEvent.isAltDown(evt);
-    };
-	
-	// Enables snapping waypoints to terminals
-	mxEdgeHandler.prototype.snapToTerminals = true;
-	
-	// Defines an icon for creating new connections in the connection handler.
-	// This will automatically disable the highlighting of the source vertex.
-	mxConnectionHandler.prototype.connectImage = new mxImage('src/images/connector.gif', 16, 16);
-	
-	// Enables connections in the graph and disables
-	// reset of zoom and translate on root change
-	// (ie. switch between XML and graphical mode).
-	editor.graph.setConnectable(true);
 
-	// Clones the source if new connection has no target
-	editor.graph.connectionHandler.setCreateTarget(true);
-	
-	// Displays information about the session
-	// in the status bar
-	editor.addListener(mxEvent.SESSION, function(editor, evt)
-	{
-		var session = evt.getProperty('session');
-		
-		if (session.connected)
-		{
-			var tstamp = new Date().toLocaleString();
-			editor.setStatus(tstamp+':'+
-				' '+session.sent+' bytes sent, '+
-				' '+session.received+' bytes received');
-		}
-		else
-		{
-			editor.setStatus('Not connected');
-		}
-	});
-	
-	// Updates the title if the root changes
-	var title = document.getElementById('title');
-	
-	if (title != null)
-	{
-		var f = function(sender)
-		{
-			title.innerHTML = 'mxDraw - ' + sender.getTitle();
-		};
-		
-		editor.addListener(mxEvent.ROOT, f);
-		f(editor);
-	}
-}
-$(function(){
-	
-	
-	new mxApplication('src/config/diagrameditor.xml');
-
-	$(".mxToolbarMode ,.mxToolbarModeSelected").wrap('<li data-toggle="sidebar"><a href="#"></a></li>')
-});
 </script>
 </body>
 </html>

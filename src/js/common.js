@@ -5,9 +5,9 @@ $(function(){
 	$('.submenu > a').click(function(e)
 	{
 		e.preventDefault();
-		var submenu = $(this).siblings('ul');
+		var submenu = $(this).siblings('.toolbar');
 		var li = $(this).parents('li');
-		var submenus = $('#sidebar li.submenu ul');
+		var submenus = $('#sidebar li.submenu .toolbar');
 		var submenus_parents = $('#sidebar li.submenu');
 		if(li.hasClass('open'))
 		{
@@ -31,22 +31,6 @@ $(function(){
 		}
 	});
 	
-	var ul = $('#sidebar > ul');
-	
-	$('#sidebar > a').click(function(e)
-	{
-		e.preventDefault();
-		var sidebar = $('#sidebar');
-		if(sidebar.hasClass('open'))
-		{
-			sidebar.removeClass('open');
-			ul.slideUp(250);
-		} else 
-		{
-			sidebar.addClass('open');
-			ul.slideDown(250);
-		}
-	});
 	// select the active submenu
 	$('.submenu.active a').click();
 });

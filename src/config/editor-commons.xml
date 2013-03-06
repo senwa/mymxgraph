@@ -1,6 +1,6 @@
 <mxEditor>
 	<ui>
-		<resource basename="resources/mxApplication"/>
+		<resource basename="src/resources/mxApplication"/>
 	</ui>
 	<mxDefaultPopupMenu as="popupHandler">
 		<add as="cut" action="cut" icon="src/images/cut.gif"/>
