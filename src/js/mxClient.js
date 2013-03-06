@@ -14203,7 +14203,7 @@ mxPath.prototype.lineTo = function(x, y)
 /**
  * Function: quadTo
  * 
- * Draws a quadratic Bézier curve from the current point to (x, y) using
+ * Draws a quadratic B?zier curve from the current point to (x, y) using
  * (x1, y1) as the control point.
  * 
  * Parameters:
@@ -14241,7 +14241,7 @@ mxPath.prototype.quadTo = function(x1, y1, x, y)
 /**
  * Function: curveTo
  *
- * Draws a cubic Bézier curve from the current point to (x, y) using
+ * Draws a cubic B?zier curve from the current point to (x, y) using
  * (x1, y1) as the control point at the beginning of the curve and (x2, y2)
  * as the control point at the end of the curve.
  * 

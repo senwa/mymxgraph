@@ -6,7 +6,7 @@
 	required configuration for using a backend, namely, the diagrameditor-backend.xml 
 	in the java and dotnet directories, respectively.
  -->
-	<include name="src/config/editor-commons.xml"/>
+	<!-- <include name="src/config/editor-commons.xml"/> -->
 	<add as="onInit"><![CDATA[
 		function ()
 		{
@@ -91,6 +91,13 @@
 			<Shape label="" href="">
 				<mxCell vertex="1" style="ellipse">		
 					<mxGeometry as="geometry" width="60" height="10"/>
+				</mxCell>
+			</Shape>
+		</add>
+		<add as="note">
+			<Shape label="note" href="">
+				<mxCell vertex="1" style="note">		
+					<mxGeometry as="geometry" width="100" height="80"/>
 				</mxCell>
 			</Shape>
 		</add>
@@ -227,6 +234,11 @@
 				<add as="strokeColor" value="#CDEB8B"/>
 				<add as="fillColor" value="#CDEB8B"/>
 			</add>
+			<add as="note">
+				<add as="shape" value="note"/>
+				<add as="strokeColor" value="#CDEB8B"/>
+				<add as="fillColor" value="#CDEB8B"/>
+			</add>
 			<add as="cylinder">
 				<add as="shape" value="cylinder"/>
 				<add as="spacingTop" value="10"/>
@@ -319,16 +331,11 @@
 			}
 		]]></add>
 		<add as="Text" template="text" icon="src/images/text.gif"/>
-		<add as="Container" template="container" icon="src/images/swimlane.gif"/>
-		<add as="Rectangle" template="rectangle" icon="src/images/rectangle.gif"/>
-		<add as="Rounded" template="rounded" icon="src/images/rounded.gif"/>
-		<add as="Ellipse" template="shape" style="ellipse" icon="src/images/ellipse.gif"/>
-		<add as="Double Ellipse" template="shape" style="doubleEllipse" icon="src/images/doubleellipse.gif"/>
-		<add as="Rhombus" template="shape" style="rhombus" icon="src/images/rhombus.gif"/>
-		<add as="Triangle" template="actor" style="triangle" icon="src/images/triangle.gif"/>
-		<add as="Hexagon" template="cloud" style="hexagon" icon="src/images/hexagon.gif"/>
-		<add as="Actor" template="actor" style="actor" icon="src/images/actor.gif"/>
-		<add as="Cylinder" template="shape" style="cylinder" icon="src/images/cylinder.gif"/>
-		<add as="Cloud" template="cloud" style="cloud" icon="src/images/cloud.gif"/>
+		<!-- <add as="Container" template="container" icon="src/images/swimlane.gif"/> -->
+		<add as="Rectangle" template="rectangle" icon="src/images/dialogboxRect1.png"/>
+		<add as="Hexagon"   template="cloud" icon="src/images/dialogboxRect2.png"/>
+		<add as="NoteShape" template="note" icon="src/images/dialogboxCircle1.png"/>
+		<add as="Rectangle" template="rectangle" icon="src/images/curvebox.png"/>
+		<add as="Rectangle" template="rectangle" icon="src/images/notebox.png"/>
 	</mxDefaultToolbar>
 </mxEditor>
