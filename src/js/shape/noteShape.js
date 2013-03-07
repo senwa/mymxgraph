@@ -31,7 +31,8 @@ NoteShape.prototype.size = 30;
 NoteShape.prototype.redrawPath = function(path, x, y, w, h, isForeground)
 {
 	var s = Math.min(w, Math.min(h, mxUtils.getValue(this.style, 'size', this.size) * this.scale));
-
+	console.log(arguments)
+	console.log(this)
 	if (isForeground)
 	{
 		path.moveTo(w - s, 0);

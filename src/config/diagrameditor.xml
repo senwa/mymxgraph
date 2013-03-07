@@ -101,6 +101,21 @@
 				</mxCell>
 			</Shape>
 		</add>
+		<add as="cube">
+			<Shape label="cube" href="">
+				<mxCell vertex="1" style="cube">		
+					<mxGeometry as="geometry" width="100" height="80"/>
+				</mxCell>
+			</Shape>
+		</add>
+		<add as="folder">
+			<Shape label="folder" href="">
+				<mxCell vertex="1" style="folder">		
+					<mxGeometry as="geometry" width="100" height="80"/>
+				</mxCell>
+			</Shape>
+		</add>
+		
 	</Array>
 	<mxGraph as="graph" alternateEdgeStyle="verticalConnector" allowLoops="1" dropEnabled="1">
 		<add as="isAutoSizeCell"><![CDATA[
@@ -234,11 +249,6 @@
 				<add as="strokeColor" value="#CDEB8B"/>
 				<add as="fillColor" value="#CDEB8B"/>
 			</add>
-			<add as="note">
-				<add as="shape" value="note"/>
-				<add as="strokeColor" value="#CDEB8B"/>
-				<add as="fillColor" value="#CDEB8B"/>
-			</add>
 			<add as="cylinder">
 				<add as="shape" value="cylinder"/>
 				<add as="spacingTop" value="10"/>
@@ -262,6 +272,23 @@
 				<add as="align" value="center"/>
 				<add as="verticalAlign" value="middle"/>
 				<add as="image" value="src/images/draw/mxlogo.jpg"/>
+			</add>
+			<add as="note">
+				<add as="shape" value="note"/>
+				<add as="strokeColor" value="#CDEB8B"/>
+				<add as="fillColor" value="#CDEB8B"/>
+			</add>
+			<add as="cube">
+				<add as="shape" value="cube"/>
+				<add as="strokeColor" value="#CDEB8B"/>
+				<add as="fillColor" value="#CDEB8B"/>
+				<add as="shadow" value="40"/>
+			</add>
+			<add as="folder">
+				<add as="shape" value="folder"/>
+				<add as="strokeColor" value="#CDEB8B"/>
+				<add as="fillColor" value="#CDEB8B"/>
+				<add as="shadow" value="40"/>
 			</add>
 		</mxStylesheet>
 		<mxGraphModel as="model">
@@ -335,7 +362,7 @@
 		<add as="Rectangle" template="rectangle" icon="src/images/dialogboxRect1.png"/>
 		<add as="Hexagon"   template="cloud" icon="src/images/dialogboxRect2.png"/>
 		<add as="NoteShape" template="note" icon="src/images/dialogboxCircle1.png"/>
-		<add as="Rectangle" template="rectangle" icon="src/images/curvebox.png"/>
-		<add as="Rectangle" template="rectangle" icon="src/images/notebox.png"/>
+		<add as="CubeShape" template="cube" icon="src/images/curvebox.png"/>
+		<add as="Rectangle" template="folder" icon="src/images/notebox.png"/>
 	</mxDefaultToolbar>
 </mxEditor>
